@@ -1,0 +1,85 @@
+<div class="card">
+    <div class="card-header">
+     Listagem de Empresas:
+    </div>
+    <div c
+    
+    
+    lass="card-body">
+      <div class="content">
+        <table mat-table [dataSource] ="dataSource" matSort class="mat-elevation-z8">
+  
+          <!-- Position Column -->
+          <ng-container matColumnDef="Nome Fantasia">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header> Nome Fantasia </th>
+            <td mat-cell *matCellDef="let empresas"> {{empresas.nomeFantasia}} </td>
+          </ng-container>
+  
+          <!-- Name Column -->
+          <ng-container matColumnDef="CNPJ">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> CNPJ </th>
+            <td mat-cell *matCellDef="let empresas"> {{empresas.cnpj}} </td>
+          </ng-container>
+  
+          <!-- Weight Column -->
+          <ng-container matColumnDef="Telefone">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Telefone </th>
+            <td mat-cell *matCellDef="let empresas"> {{empresas.telefone}} </td>
+          </ng-container>
+  
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="Endereço">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Endereço </th>
+            <td mat-cell *matCellDef="let empresas"> {{empresas.endereco}} </td>
+          </ng-container>
+  
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="Razão Social">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Razão Social </th>
+            <td mat-cell *matCellDef="let empresas"> {{empresas.razaoSocial}} </td>
+          </ng-container>
+
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="Materiais Trabalhados">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Materiais Trabalhados </th>
+            <td mat-cell *matCellDef="let empresas"> {{empresas.materiaisTrabalhados}} </td>
+          </ng-container>
+
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="Cotação">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> CotaÇão </th>
+            <td mat-cell *matCellDef="let empresas"> {{empresas.cotacao}} </td>
+          </ng-container>
+
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="Numero De Coleta">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Numero De Coleta </th>
+            <td mat-cell *matCellDef="let empresas"> {{empresas.numeroDeColeta}} </td>
+          </ng-container>
+  
+          <!-- Symbol Column -->
+          <ng-container matColumnDef="Ações">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Ações </th>
+            <td mat-cell *matCellDef="let empresas">
+              <button mat-button class="btn btn-primary" (click)="editar(empresas)">Editar</button>
+            </td>
+          </ng-container>
+  
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+  
+      </div>
+  
+    </div>
+    <div class="container">
+      <a routerLink="/empresasDetalhe">
+        <button mat-fab color="primary" >
+          <mat-icon>add</mat-icon>
+        </button>
+      </a>
+    </div>
+  
+  </div>
+  
+  

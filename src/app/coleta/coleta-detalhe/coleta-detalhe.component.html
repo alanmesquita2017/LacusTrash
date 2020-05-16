@@ -1,0 +1,56 @@
+<div class="card">
+    <div class="card-header">
+      Manutenção da Coleta:
+    </div>
+    <div class="card-body">
+      <div class="card-container">
+        <div>
+          <form #formUsuario="ngForm" (ngSubmit)="onSubmit(formUsuario)" class="example-form">
+            <div style="display: none">
+              <mat-form-field class="example-full-width">
+                <mat-label>ID</mat-label>
+                <input matInput [ngModel]="coleta?.id" name="id">
+              </mat-form-field>
+            </div>
+            <mat-form-field class="example-full-width">
+              <mat-label>Pesagem Material </mat-label>
+              <input type="text" matInput placeholder="Ex.2000" [(ngModel)]="coleta.pesagemMaterial" name="pesagemMaterial">
+            </mat-form-field>
+  
+            <mat-form-field class="example-full-width">
+              <mat-label>Qualidade do Material</mat-label>
+              <input matInput placeholder="Ex.Boa" [(ngModel)]="coleta.qualidadeMaterial" name="qualidadeMaterial">
+            </mat-form-field>
+  
+            <mat-form-field class="example-full-width">
+              <mat-label>Data Da Coleta</mat-label>
+              <input matInput placeholder="Ex.25/04/2020" [(ngModel)]="coleta.dataColeta" name="dataColeta">
+            </mat-form-field>
+  
+            <mat-form-field class="example-full-width">
+              <mat-label>Localização Do Cliente</mat-label>
+              <input matInput placeholder="Ex.Rua teste setor central" [(ngModel)]="coleta.localizacaoCliente" name="localizacaoCliente">
+            </mat-form-field> razaoSocial
+
+            <!--mat-form-field class="example-full-width">
+              <mat-label>E-mail</mat-label>
+              <input matInput placeholder="email@email.com" [(ngModel)]="aluno.email" name="email">
+            </mat-form-field>
+  
+            <mat-form-field>
+              <mat-label>Data de Nascimento</mat-label>
+              <input matInput [matDatepicker]="picker">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field-->
+  
+            <hr>
+            <button mat-button type="submit" class="btn btn-primary">Salvar</button>
+  
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
